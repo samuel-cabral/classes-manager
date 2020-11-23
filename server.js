@@ -3,6 +3,7 @@ const nunjucks = require('nunjucks');
 const routes = require('./routes');
 
 const server = express();
+const port = 5001;
 
 server.use(express.static('public'));
 server.use(routes);
@@ -15,6 +16,6 @@ nunjucks.configure('views', {
   noCache: true,
 });
 
-server.listen(3000, () => {
-  console.log('server started on port 3000');
+server.listen(5000, () => {
+  console.log(`server started on port ${port}`);
 });
